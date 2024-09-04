@@ -12,13 +12,13 @@
     align-items: center;
 }
 
-@mixin accordionPanel($width: 70%, $paddingX: 18px, $paddingY: 0px, $background: $white-color) {
+@mixin accordionPanel($width: 70%, $height: 0, $paddingX: 18px, $paddingY: 0px, $background: $white-color) {
     width: $width;
     padding: rem($paddingY) rem($paddingX);
     background-color: $background;
     overflow: hidden;
     text-align: left;
-    height: 0;
+    height: $height;
     transition: 0.3s ease-in-out;
     border-bottom: rem(1px) solid $light-gray-color;
 }

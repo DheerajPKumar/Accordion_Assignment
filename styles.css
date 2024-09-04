@@ -99,4 +99,39 @@ body::-webkit-scrollbar {
   letter-spacing: 0.03125rem;
   color: #000;
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .container__accordions-box {
+    grid-template-columns: 10.625rem 10.625rem;
+  }
+  .container__accordions-panel {
+    width: 90%;
+    padding: 0rem 1.125rem;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: left;
+    height: 0;
+    transition: 0.3s ease-in-out;
+    border-bottom: 0.0625rem solid rgb(181, 169, 169);
+  }
+  .container__accordions-header {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.125rem 0;
+    cursor: pointer;
+    font-size: 0.9375rem;
+  }
+  .container__accordions-panelshow {
+    height: auto;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+@media (max-width: 390px) {
+  .container__accordions-box {
+    grid-template-columns: 10.625rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

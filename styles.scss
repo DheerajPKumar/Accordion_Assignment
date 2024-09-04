@@ -88,3 +88,37 @@ body::-webkit-scrollbar {
         }
     }
 }
+
+@media(max-width:768px){
+    .container{
+        &__accordions{
+            &-box{
+                grid-template-columns: rem(170px) rem(170px);
+            }
+
+            &-panel{
+                @include accordionPanel(90%);
+            }
+
+            &-header{
+                @include containerHeader(90%);
+            }
+
+            &-panelshow {
+                height: auto;
+                padding-top: rem(20px);
+                padding-bottom: rem(20px);
+            }
+        }
+    }
+}
+
+@media(max-width:390px){
+    .container{
+        &__accordions{
+            &-box{
+                grid-template-columns: rem(170px);
+            }
+        }
+    }
+}

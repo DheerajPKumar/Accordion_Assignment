@@ -1,0 +1,102 @@
+@import "./colors.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container__accordions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container__accordions-header {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.125rem 0;
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+.container__accordions-accordion {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  color: #007dc5;
+}
+.container__accordions-values {
+  display: flex;
+  gap: 1.875rem;
+  margin-bottom: 0.9375rem;
+}
+.container__accordions-value {
+  font-size: 1.8rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+  color: #000;
+  margin-bottom: 0;
+  word-break: break-word;
+}
+.container__accordions-toggle {
+  font-size: 1.25rem;
+  transition: transform 0.4s ease-in-out;
+}
+.container__accordions-panel {
+  width: 70%;
+  padding: 0rem 1.125rem;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: left;
+  height: 0;
+  transition: 0.3s ease-in-out;
+  border-bottom: 0.0625rem solid rgb(181, 169, 169);
+}
+.container__accordions-box {
+  display: grid;
+  grid-template-columns: 10.625rem 10.625rem 10.625rem;
+  gap: 0;
+}
+.container__accordions-panelshow {
+  height: auto;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.container__accordions-toggle {
+  font-size: 2.5rem;
+}
+.container__accordions-databox {
+  height: 6.25rem;
+  width: 10.625rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.125);
+  display: flex;
+  gap: 0.9375rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem 0.9375rem;
+}
+.container__accordions-name {
+  font-size: 1.5rem;
+  color: #2469bc;
+  font-family: Basis-medium;
+  display: inline-block;
+  line-height: 2rem;
+}
+.container__accordions-navigate {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.03125rem;
+  color: #000;
+  margin-bottom: 0;
+}/*# sourceMappingURL=styles.css.map */

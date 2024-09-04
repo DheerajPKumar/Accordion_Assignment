@@ -1,0 +1,90 @@
+@import "./sass/functions";
+@import "./sass/mixins";
+@import "./sass/colors";
+
+* {
+    @include boilerPlate;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    &__accordions {
+        width: 100%;
+        @include flexAlignCenter;
+        flex-direction: column;
+
+        &-header {
+            @include containerHeader;
+        }
+
+        &-accordion {
+            background: none;
+            border: none;
+            padding: 0;
+            @include fontSetup(3rem, 500);
+            cursor: pointer;
+            color: $blue-color;
+        }
+
+        &-values {
+            display: flex;
+            gap: rem(30px);
+            margin-bottom: rem(15px);
+        }
+
+        &-value {
+            @include fontSetup(1.8rem, normal ,2.5rem);
+            color: $black-color;
+            margin-bottom: 0;
+            word-break: break-word;
+        }
+
+        &-toggle {
+            font-size: rem(20px);
+            transition: transform 0.4s ease-in-out;
+        }
+
+        &-panel {
+            @include accordionPanel;
+        }
+
+        &-box {
+            display: grid;
+            grid-template-columns: rem(170px) rem(170px) rem(170px);
+            gap: 0;
+        }
+
+        &-panelshow {
+            height: auto;
+            padding-top: rem(20px);
+            padding-bottom: rem(20px);
+        }
+
+        &-toggle {
+            font-size: rem(40px);
+        }
+
+        &-databox {
+            @include dataBox;
+        }
+
+        &-name {
+            font-size: 1.5rem;
+            color: $highlight-blue;
+            font-family: Basis-medium;
+            display: inline-block;
+            line-height: 2rem;
+        }
+
+        &-navigate {
+            @include fontSetup(1rem, 500, 160%);
+            letter-spacing: rem(.5px);
+            color: $black-color;
+            margin-bottom: 0;
+        }
+    }
+}

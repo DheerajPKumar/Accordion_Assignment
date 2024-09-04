@@ -1,0 +1,52 @@
+@import "./colors.css";
+@import "./functions";
+
+@mixin boilerPlate{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexAlignCenter{
+    display: flex;
+    align-items: center;
+}
+
+@mixin accordionPanel($width: 70%, $paddingX: 18px, $paddingY: 0px, $background: $white-color) {
+    width: $width;
+    padding: rem($paddingY) rem($paddingX);
+    background-color: $background;
+    overflow: hidden;
+    text-align: left;
+    height: 0;
+    transition: 0.3s ease-in-out;
+    border-bottom: rem(1px) solid $light-gray-color;
+}
+
+@mixin dataBox($height: 100px, $width: 170px, $borderColor: $border-color, $paddingX: 15px, $paddingY: 20px) {
+    height: rem($height);
+    width: rem($width);
+    border: rem(1px) solid $borderColor;
+    display: flex;
+    gap: rem(15px);
+    flex-direction: column;
+    justify-content: center;
+    padding: rem($paddingY) rem($paddingX);
+}
+
+@mixin containerHeader($width: 70%, $paddingY: 18px) {
+    width: $width;
+    @include flexAlignCenter;
+    justify-content: space-between;
+    padding: rem($paddingY) 0;
+    cursor: pointer;
+    font-size: rem(15px);
+}
+
+@mixin fontSetup($size, $weight: normal, $lineHeight: normal) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}
+
+
